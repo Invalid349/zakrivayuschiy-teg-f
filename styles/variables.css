@@ -1,1 +1,43 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Ширина контейнера */
+  --container-width: clamp(
+    375px,
+    calc((100vw - 375px) * 0.3052 + 375px),
+    700px
+  );
+
+  /* Отступы в шапке */
+  --header-padding: clamp(
+    122px,
+    calc((100vw - 375px) * 0.0075 + 122px),
+    130px
+  );
+
+  /* Размер логотипа */
+  --logo-size: clamp(
+    49px,
+    calc((100vw - 375px) * 0.015 + 49px),
+    65px
+  );
+
+  /* Размер заголовка */
+  --title-size: clamp(
+    14px,
+    calc((100vw - 375px) * 0.0084 + 23px),
+    23px
+  );
+  --main-border: 2px solid #000000;
+  --main-background-color: #FFFFFF;
+  --button-text-hover: #ffffff;
+    /* Шрифты */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-accent: 'PressStart2P', monospace;
+  --font-weight-regular: 'wght' 410;
+  --font-weight-bold: 'wght' 715;
+
+  --accent-color: #000;
+  /* сердце */
+  --heart-border: black;
+  --heart-color: #FF0000;
+}
