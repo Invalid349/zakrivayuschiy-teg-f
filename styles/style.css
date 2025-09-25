@@ -9,8 +9,17 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/* фильтры */
+.filter-sepia      { filter: sepia(50%); }
+.filter-saturate   { filter: saturate(200%); }
+.filter-brightness { filter: brightness(0.5); }
+.filter-contrast   { filter: contrast(180%); }
+.filter-blur       { filter: blur(10px); }
+.filter-invert     { filter: invert(100%); }
+.filter-multi      { filter: sepia(60%) brightness(1.2) contrast(130%); }
 .page {
   font-family: var(--font-main);
+  background-attachment: fixed;
   background-image: repeating-linear-gradient(
   #d3d3d3 0px,
   #d3d3d3 2px,
@@ -81,34 +90,6 @@
 .card-image {
   max-inline-size: 100%;
 }
-.card-list__item:nth-child(2) .card-image {
-  filter: sepia(50%);
-}
-.card-list__item:nth-child(3) .card-image {
-  filter: saturate(200%);
-}
-.card-list__item:nth-child(4) .card-image {
-  filter: brightness(0.5);
-}
-.card-list__item:nth-child(5) .card-image {
-  filter: contrast(180%);
-}
-.card-list__item:nth-child(6) .card-image {
-  filter: blur(10px);
-}
-.card-list__item:nth-child(7) .card-image {
-  filter: invert(100%);
-}
-.card-list__item:nth-child(8) .card-image {
-  filter: sepia(60%) brightness(1.2) contrast(130%);
-}
-@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
-  .card-list__item__img-label {
-    text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
-  }
-}
 .card-list__item__img-label {
   position: absolute;
   top: 25px;
@@ -124,6 +105,13 @@
   0 -0.5px #fff;
   mix-blend-mode: hard-light;
 }
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card-list__item__img-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
+}
 .card-list__item__content {
   display: grid;
   gap: 25px;
@@ -131,7 +119,6 @@
   padding-block-start:19px;
   padding-block-end: 26px;
   line-height: 21px;
-  letter-spacing: 0.68px;
 }
 .card-list__item__content__text {
   display: grid;
@@ -189,8 +176,7 @@ dialog {
   font-size: 14px;
 }
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.5);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 .dialog__content {
   display: grid;
