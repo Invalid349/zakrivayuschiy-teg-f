@@ -10,13 +10,27 @@
 
 */
 /* фильтры */
-.filter-sepia      { filter: sepia(50%); }
-.filter-saturate   { filter: saturate(200%); }
-.filter-brightness { filter: brightness(0.5); }
-.filter-contrast   { filter: contrast(180%); }
-.filter-blur       { filter: blur(10px); }
-.filter-invert     { filter: invert(100%); }
-.filter-multi      { filter: sepia(60%) brightness(1.2) contrast(130%); }
+.filter-sepia {
+  filter: sepia(50%);
+}
+.filter-saturate {
+  filter: saturate(200%);
+}
+.filter-brightness {
+  filter: brightness(0.5);
+}
+.filter-contrast {
+  filter: contrast(180%);
+}
+.filter-blur {
+  filter: blur(10px);
+}
+.filter-invert {
+  filter: invert(100%);
+}
+.filter-multi {
+  filter: sepia(60%) brightness(1.2) contrast(130%);
+}
 .page {
   font-family: var(--font-main);
   background-attachment: fixed;
