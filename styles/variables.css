@@ -24,9 +24,10 @@
   /* Размер заголовка */
   --title-size: clamp(
     14px,
-    calc((100vw - 375px) * 0.0084 + 23px),
+    calc(14px + (100vw - 375px) * 0.00845),
     23px
   );
+
   --main-border: 2px solid #000000;
   --main-background-color: #FFFFFF;
   --button-text-hover: #ffffff;

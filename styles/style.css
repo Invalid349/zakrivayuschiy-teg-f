@@ -95,7 +95,6 @@
   margin-inline: 10px;
   margin-block: 4px;
   font-size: 18px;
-  letter-spacing: 0.25px;
   font-variation-settings: var(--font-weight-bold);
 }
 .card-list__item__img {
@@ -182,7 +181,7 @@
 }
 @media (width <= 375px) {
   .button_save {
-    flex-direction:vcolumn;
+    flex-direction:column;
   }
 }
 dialog {
